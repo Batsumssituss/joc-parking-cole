@@ -33,3 +33,7 @@ func _physics_process(delta):
 	get_input() 
 	rotation += rotation_direction * rotation_speed * delta 
 	move_and_slide() 
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	preload("res://pau.tscn")
