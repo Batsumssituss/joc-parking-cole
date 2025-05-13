@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://cavek2xqlbubc"]
+[gd_scene load_steps=14 format=3 uid="uid://cavek2xqlbubc"]
 
 [ext_resource type="Texture2D" uid="uid://bfmvpj4bknecu" path="res://spritesheet_tiles.png" id="1_xbsby"]
 [ext_resource type="Script" uid="uid://c3fltki2tsqip" path="res://character_body_2d.gd" id="2_q48sh"]
 [ext_resource type="Texture2D" uid="uid://ceqah18whukbg" path="res://Cars/car_blue_1.png" id="3_xbxhy"]
+[ext_resource type="PackedScene" uid="uid://d3pwvq6a38k0t" path="res://moneda.tscn" id="4_q48sh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xbsby"]
 texture = ExtResource("1_xbsby")
@@ -496,3 +497,7 @@ shape = SubResource("RectangleShape2D_t46ek")
 position = Vector2(606, 135)
 rotation = -0.71733
 shape = SubResource("RectangleShape2D_ge55x")
+
+[node name="Area2D2" parent="Area2D" instance=ExtResource("4_q48sh")]
+position = Vector2(71, 99)
+scale = Vector2(0.25, 0.25)
