@@ -19,15 +19,15 @@
 
 extends CharacterBody2D 
 
-var speed = 400 
-var rotation_speed = 1.5 
+var speed = 150 
+var rotation_speed = 1.5
 var rotation_direction = 0 
 
  
 func get_input(): 
 	rotation_direction = Input.get_axis("esquerra", "dreta") 
 
-	velocity = transform.y * Input.get_axis("adalt", "abaix") * speed 
+	velocity = transform.y * Input.get_axis("abaix", "adalt") * speed 
 
 func _physics_process(delta): 
 	get_input() 
