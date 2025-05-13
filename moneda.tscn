@@ -1,14 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://d3pwvq6a38k0t"]
+[gd_scene load_steps=6 format=3 uid="uid://d3pwvq6a38k0t"]
 
-[ext_resource type="Script" uid="uid://dkib0nbrd8ixt" path="res://moneda.gd" id="1_3fws3"]
+[ext_resource type="Script" uid="uid://c30ci7q46v73g" path="res://area_2d.gd" id="1_3fws3"]
 [ext_resource type="Texture2D" uid="uid://dyl1rr6tgr8qv" path="res://moneda removebg-preview.png" id="2_3fws3"]
 [ext_resource type="AudioStream" uid="uid://c4vbft1w151by" path="res://coin-recieved-230517.mp3" id="3_iubt5"]
+
+[sub_resource type="Curve" id="Curve_3fws3"]
+_data = [Vector2(0.0141243, 0.99062), 0.0, 0.0, 0, 0, Vector2(0.985876, 0.41847), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iubt5"]
 radius = 90.0056
 
 [node name="node" type="Node2D"]
-script = ExtResource("1_3fws3")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 emitting = false
@@ -17,10 +20,17 @@ lifetime = 0.59
 one_shot = true
 explosiveness = 1.0
 spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 100.0
+scale_amount_min = 2.0
+scale_amount_max = 4.0
+scale_amount_curve = SubResource("Curve_3fws3")
 
 [node name="Camera2D" type="Camera2D" parent="CPUParticles2D"]
 
 [node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_3fws3")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
 texture = ExtResource("2_3fws3")
