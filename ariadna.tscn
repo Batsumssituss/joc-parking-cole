@@ -1,9 +1,10 @@
-[gd_scene load_steps=21 format=3 uid="uid://cavek2xqlbubc"]
+[gd_scene load_steps=22 format=3 uid="uid://cavek2xqlbubc"]
 
 [ext_resource type="Texture2D" uid="uid://bfmvpj4bknecu" path="res://spritesheet_tiles.png" id="1_xbsby"]
 [ext_resource type="Script" uid="uid://c3fltki2tsqip" path="res://character_body_2d.gd" id="2_q48sh"]
 [ext_resource type="Texture2D" uid="uid://ceqah18whukbg" path="res://Cars/car_blue_1.png" id="3_xbxhy"]
 [ext_resource type="Script" uid="uid://o1rx20gmac5" path="res://parets.gd" id="4_q48sh"]
+[ext_resource type="PackedScene" uid="uid://d3pwvq6a38k0t" path="res://moneda.tscn" id="5_xbxhy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xbsby"]
 texture = ExtResource("1_xbsby")
@@ -552,5 +553,8 @@ shape = SubResource("RectangleShape2D_o7gbh")
 position = Vector2(110, -63)
 rotation = -0.598648
 shape = SubResource("RectangleShape2D_4b4kn")
+
+[node name="node" parent="." instance=ExtResource("5_xbxhy")]
+position = Vector2(64, 128)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
