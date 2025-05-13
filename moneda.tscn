@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dyl1rr6tgr8qv" path="res://moneda removebg-preview.png" id="2_3fws3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iubt5"]
-radius = 91.0494
+radius = 90.0056
 
 [node name="node" type="Node2D"]
 
