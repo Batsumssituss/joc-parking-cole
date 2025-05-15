@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bn5024yg4m8qy"]
+[gd_scene load_steps=25 format=3 uid="uid://bn5024yg4m8qy"]
 
 [ext_resource type="Texture2D" uid="uid://bfmvpj4bknecu" path="res://spritesheet_tiles.png" id="1_pasfg"]
 [ext_resource type="Script" uid="uid://cxul8n2wtjc42" path="res://cotxe.gd" id="2_pasfg"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://o1rx20gmac5" path="res://parets.gd" id="4_p41tj"]
 [ext_resource type="Script" uid="uid://c8nac3rp1gnd1" path="res://Canvi_adria_ariadna.gd" id="5_xyac2"]
 [ext_resource type="PackedScene" uid="uid://d3pwvq6a38k0t" path="res://moneda.tscn" id="6_3uyx5"]
+[ext_resource type="Script" uid="uid://qwkymvnuynr0" path="res://HUD.gd" id="7_r0wrs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3uyx5"]
 texture = ExtResource("1_pasfg")
@@ -1327,6 +1328,16 @@ zoom = Vector2(0.75, 0.75)
 
 [node name="moneda" parent="." instance=ExtResource("6_3uyx5")]
 position = Vector2(223, 673)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("7_r0wrs")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 337.0
+offset_top = 371.0
+offset_right = 426.0
+offset_bottom = 394.0
+text = "Monedes: 0"
 
 [connection signal="dues_moneda" from="CharacterBody2D" to="P de parking" method="_on_character_body_2d_dues_moneda"]
 [connection signal="body_entered" from="Parets" to="Parets" method="_on_body_entered"]

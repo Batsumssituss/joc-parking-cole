@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://cavek2xqlbubc"]
+[gd_scene load_steps=29 format=3 uid="uid://cavek2xqlbubc"]
 
 [ext_resource type="Texture2D" uid="uid://bfmvpj4bknecu" path="res://spritesheet_tiles.png" id="1_xbsby"]
 [ext_resource type="Script" uid="uid://c3fltki2tsqip" path="res://character_body_2d.gd" id="2_q48sh"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://d3pwvq6a38k0t" path="res://moneda.tscn" id="5_xbxhy"]
 [ext_resource type="Texture2D" uid="uid://dcklsdfxamdp6" path="res://parking.jpg" id="6_6go33"]
 [ext_resource type="Script" uid="uid://cpp4xlgtkn6jo" path="res://area canvi d'escena de ari a adria.gd" id="7_4ncxm"]
+[ext_resource type="Script" uid="uid://qwkymvnuynr0" path="res://HUD.gd" id="8_3vgma"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xbsby"]
 texture = ExtResource("1_xbsby")
@@ -815,6 +816,22 @@ script = ExtResource("7_4ncxm")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 position = Vector2(-135, -243)
 shape = SubResource("RectangleShape2D_y50si")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("8_3vgma")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = -0.069
+anchor_top = -0.354
+anchor_right = 0.082
+anchor_bottom = -0.172
+offset_left = 36.488
+offset_top = 55.392
+offset_right = -48.464
+offset_bottom = -37.544
+text = "Monedes: 0"
+max_lines_visible = 1
 
 [connection signal="dues_moneda" from="CharacterBody2D" to="Area2D2" method="_on_character_body_2d_dues_moneda"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

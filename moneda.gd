@@ -24,4 +24,5 @@ func _on_body_entered(body):
 	$CPUParticles2D.emitting = true
 	$so.playing = true
 	$Sprite2D.visible = false
+	Global.score += 1
 	body.agafa_moneda()
