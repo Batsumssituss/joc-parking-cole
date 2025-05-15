@@ -21,9 +21,12 @@ extends CharacterBody2D
 
 var speed = 150 
 var rotation_speed = 1.5
-var rotation_direction = 0 
+var rotation_direction = 0
+var moneda := 0 
 
+signal dues_moneda
  
+
 func get_input(): 
 	rotation_direction = Input.get_axis("esquerra", "dreta") 
 
@@ -37,3 +40,12 @@ func _physics_process(delta):
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	preload("res://pau.tscn")
+
+func agafa_moneda():
+	moneda += 1
+	print(moneda)
+	if moneda >= 1:
+		dues_moneda.emit()
+
+
+

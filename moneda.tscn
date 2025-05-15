@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://d3pwvq6a38k0t"]
+[gd_scene load_steps=7 format=3 uid="uid://d3pwvq6a38k0t"]
 
-[ext_resource type="Script" uid="uid://c30ci7q46v73g" path="res://area_2d.gd" id="1_3fws3"]
+[ext_resource type="Script" path="res://area_2d.gd" id="1_3fws3"]
+[ext_resource type="Script" path="res://moneda.gd" id="1_nnkqs"]
 [ext_resource type="Texture2D" uid="uid://dyl1rr6tgr8qv" path="res://moneda removebg-preview.png" id="2_3fws3"]
 [ext_resource type="AudioStream" uid="uid://c4vbft1w151by" path="res://coin-recieved-230517.mp3" id="3_iubt5"]
 
@@ -11,19 +12,20 @@ radius = 90.0056
 _data = [Vector2(0.0141243, 0.99062), 0.0, 0.0, 0, 0, Vector2(0.985876, 0.41847), 0.0, 0.0, 0, 0]
 point_count = 2
 
-[node name="node" type="Node2D"]
+[node name="moneda" type="Area2D"]
 scale = Vector2(0.2, 0.2)
+script = ExtResource("1_nnkqs")
 
-[node name="Area2D" type="Area2D" parent="."]
-script = ExtResource("1_3fws3")
-
-[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1, 1)
 texture = ExtResource("2_3fws3")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1, 1)
 shape = SubResource("CircleShape2D_iubt5")
 
-[node name="CPUParticles2D" type="CPUParticles2D" parent="Area2D"]
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+scale = Vector2(1, 1)
 emitting = false
 amount = 50
 lifetime = 0.59
@@ -37,7 +39,12 @@ scale_amount_min = 2.0
 scale_amount_max = 4.0
 scale_amount_curve = SubResource("Curve_3fws3")
 
-[node name="Camera2D" type="Camera2D" parent="Area2D/CPUParticles2D"]
+[node name="Camera2D" type="Camera2D" parent="CPUParticles2D"]
 
-[node name="so" type="AudioStreamPlayer2D" parent="Area2D"]
+[node name="so" type="AudioStreamPlayer2D" parent="."]
+scale = Vector2(1, 1)
 stream = ExtResource("3_iubt5")
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+script = ExtResource("1_3fws3")
