@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4tsoxjjub8o1"]
+
+[ext_resource type="Texture2D" uid="uid://ce6njaiv6yur2" path="res://winner.jpg" id="1_d3ia8"]
+[ext_resource type="Script" uid="uid://3vfcqg80xyap" path="res://button.gd" id="2_rnxuv"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="winner" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(579, 323.5)
+scale = Vector2(2.55556, 1.7989)
+texture = ExtResource("1_d3ia8")
+
+[node name="Button" type="Button" parent="."]
+offset_right = 1157.0
+offset_bottom = 653.0
+text = "FES-ME CLICK PER A COMENÇAR DE NOU"
+script = ExtResource("2_rnxuv")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

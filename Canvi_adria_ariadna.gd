@@ -10,7 +10,7 @@ func _ready():
 func _process(delta):
 	pass
 
-var canvia_a_final = preload("res://ariadna.tscn")
+var canvia_a_final = preload("res://winner.tscn")
 
 func _on_character_body_2d_dues_moneda():
 	monitoring = true
@@ -18,4 +18,4 @@ func _on_character_body_2d_dues_moneda():
 
 
 func _on_body_entered(body):
-	get_tree().change_scene_to_file("res://ariadna.tscn")
+	get_tree().change_scene_to_file("res://winner.tscn")

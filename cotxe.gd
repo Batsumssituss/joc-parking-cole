@@ -11,11 +11,11 @@ signal dues_moneda
 func get_input(): 
 	rotation_direction = Input.get_axis("esquerra", "dreta") 
 
-	velocity = transform.y * Input.get_axis("adalt", "abaix") * speed 
+	velocity = transform.x * Input.get_axis("abaix", "adalt") * speed 
 
 func _physics_process(delta): 
 	get_input() 
-	rotation += rotation_direction * rotation_speed * delta 
+	rotation += rotation_direction * rotation_speed * delta
 	move_and_slide() 
 
 
