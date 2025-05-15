@@ -1,12 +1,12 @@
 [gd_scene load_steps=28 format=3 uid="uid://cavek2xqlbubc"]
 
 [ext_resource type="Texture2D" uid="uid://bfmvpj4bknecu" path="res://spritesheet_tiles.png" id="1_xbsby"]
-[ext_resource type="Script" path="res://character_body_2d.gd" id="2_q48sh"]
+[ext_resource type="Script" uid="uid://c3fltki2tsqip" path="res://character_body_2d.gd" id="2_q48sh"]
 [ext_resource type="Texture2D" uid="uid://ceqah18whukbg" path="res://Cars/car_blue_1.png" id="3_xbxhy"]
-[ext_resource type="Script" path="res://parets.gd" id="4_q48sh"]
+[ext_resource type="Script" uid="uid://o1rx20gmac5" path="res://parets.gd" id="4_q48sh"]
 [ext_resource type="PackedScene" uid="uid://d3pwvq6a38k0t" path="res://moneda.tscn" id="5_xbxhy"]
 [ext_resource type="Texture2D" uid="uid://dcklsdfxamdp6" path="res://parking.jpg" id="6_6go33"]
-[ext_resource type="Script" path="res://area canvi d'escena de ari a adria.gd" id="7_4ncxm"]
+[ext_resource type="Script" uid="uid://cpp4xlgtkn6jo" path="res://area canvi d'escena de ari a adria.gd" id="7_4ncxm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xbsby"]
 texture = ExtResource("1_xbsby")
@@ -693,6 +693,7 @@ size = Vector2(156.5, 51.1382)
 size = Vector2(40, 22)
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(0, -1)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 rotation = -3.14159

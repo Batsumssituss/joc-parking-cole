@@ -46,6 +46,3 @@ func agafa_moneda():
 	print(moneda)
 	if moneda >= 1:
 		dues_moneda.emit()
-
-
-
