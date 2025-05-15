@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://bn5024yg4m8qy"]
+[gd_scene load_steps=26 format=3 uid="uid://bn5024yg4m8qy"]
 
 [ext_resource type="Texture2D" uid="uid://bfmvpj4bknecu" path="res://spritesheet_tiles.png" id="1_pasfg"]
 [ext_resource type="Script" uid="uid://cxul8n2wtjc42" path="res://cotxe.gd" id="2_pasfg"]
@@ -1186,10 +1186,17 @@ size = Vector2(40, 28)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_upvf5"]
 size = Vector2(155, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7dtrr"]
+size = Vector2(57, 90)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_41wdu"]
 size = Vector2(40, 264)
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(468, 370)
+zoom = Vector2(0.75, 0.75)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_r0wrs")
@@ -1313,6 +1320,10 @@ shape = SubResource("RectangleShape2D_fk82e")
 position = Vector2(415, -26)
 shape = SubResource("RectangleShape2D_upvf5")
 
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="Parets"]
+position = Vector2(564, 64)
+shape = SubResource("RectangleShape2D_7dtrr")
+
 [node name="P de parking" type="Area2D" parent="."]
 monitoring = false
 script = ExtResource("5_xyac2")
@@ -1321,10 +1332,6 @@ script = ExtResource("5_xyac2")
 position = Vector2(1121, 294)
 shape = SubResource("RectangleShape2D_41wdu")
 debug_color = Color(0.618966, 0.378957, 0.952869, 0.42)
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(468, 370)
-zoom = Vector2(0.75, 0.75)
 
 [node name="moneda" parent="." instance=ExtResource("6_3uyx5")]
 position = Vector2(223, 673)
