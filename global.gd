@@ -1,3 +1,3 @@
 extends Node
 
-var score: int = 0
+@export var score: int = 0
